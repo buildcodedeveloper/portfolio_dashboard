@@ -1,0 +1,69 @@
+/**************************************************************************************************************************************************************************************************
+ * THE 7–1 PATTERN ANOTHER STRUCTURE I CAME ACROSS IS THE 7–1 PATTERN FROM HUGO GIRAUDEL. HERE’S HOW YOU MIGHT SET UP A DIRECTORY ALONG WITH SOME EXAMPLES OF FILES THAT WOULD BE IN EACH FOLDER. *
+ *                                                                                             BASE/                                                                                              *
+ *                                                                                          _RESET.SCSS                                                                                           *
+ *                                                                                        _TYPOGRAPHY.SCSS                                                                                        *
+ *                                                                                          _COLOR.SCSS                                                                                           *
+ *                                                                                          COMPONENTS/                                                                                           *
+ *                                                                                         _BUTTONS.SCSS                                                                                          *
+ *                                                                                        _NAVIGATION.SCSS                                                                                        *
+ *                                                                                         _GALLERY.SCSS                                                                                          *
+ *                                                                                            LAYOUT/                                                                                             *
+ *                                                                                          _HEADER.SCSS                                                                                          *
+ *                                                                                           _GRID.SCSS                                                                                           *
+ *                                                                                         _SIDEBAR.SCSS                                                                                          *
+ *                                                                                             PAGES/                                                                                             *
+ *                                                                                           _HOME.SCSS                                                                                           *
+ *                                                                                          _ABOUT.SCSS                                                                                           *
+ *                                                                                         _CONTACT.SCSS                                                                                          *
+ *                                                                                            THEMES/                                                                                             *
+ *                                                                                          _THEME.SCSS                                                                                           *
+ *                                                                                          _ADMIN.SCSS                                                                                           *
+ *                                                                                      HELPERS/ (OR UTILS/)                                                                                      *
+ *                                                                                        _VARIABLES.SCSS                                                                                         *
+ *                                                                                        _FUNCTIONS.SCSS                                                                                         *
+ *                                                                                          _MIXINS.SCSS                                                                                          *
+ *                                                                                            VENDORS/                                                                                            *
+ *                                                                                        _BOOTSTRAP.SCSS                                                                                         *
+ *                                                                                        _JQUERY-UI.SCSS                                                                                         *
+ *                                                                                           MAIN.SCSS                                                                                            *
+ **************************************************************************************************************************************************************************************************/
+/****************************************************************************************************************************************************************************************************************************************
+ *                                                                THE BASE FOLDER HOLDS BOILERPLATE CONTENT. IT HOLDS THE STYLES EVERY PAGE OF YOUR SITE SHOULD RECEIVE                                                                 *
+ *                                                     THE COMPONENTS FOLDER HOLDS ALL YOUR MICRO LAYOUT FILES. YOUR STYLES FOR BUTTONS AND NAVIGATION AND SIMILAR PAGE COMPONENTS.                                                     *
+ *                                  YOUR MACRO LAYOUT FILES GO IN THE LAYOUTS FOLDER. STYLES FOR MAJOR SECTIONS OF THE LAYOUT LIKE A HEADER OR FOOTER AND STYLES FOR A GRID SYSTEM WOULD BELONG HERE.                                   *
+ *   IF YOU HAVE STYLES SPECIFIC TO INDIVIDUAL PAGES ON YOUR SITE, YOU CAN PLACE THEM IN THE PAGES FOLDER. FOR EXAMPLE IT’S NOT UNCOMMON FOR THE HOME PAGE OF YOUR SITE TO REQUIRE PAGE SPECIFIC STYLES THAT NO OTHER PAGE RECEIVES.    *
+ * THE THEMES FOLDER HOLDS FILES THAT CREATE PROJECT SPECIFIC THEMES. FOR EXAMPLE ONE SECTION OF YOUR SITE MIGHT USE A COLOR SCHEME WITH PRIMARY COLORS, WHILE ANOTHER SECTION BUILDS A COLOR SCHEME BASED ON NEUTRALS AND EARTH TONES. *
+ *                                                       THE HELPERS OR UTILS FOLDER HOLDS SASS TOOLS, HELPER FILES, VARIABLES, AND CONFIG FILES. THESE FILES WON’T BE COMPILED.                                                        *
+ *                                                      FINALLY THE VENDORS FOLDER HOLDS 3RD PARTY CODE AND THE MAIN.SCSS FILE USES @IMPORT STATEMENTS TO INCLUDE THE OTHER FILES.                                                      *
+ *                                                                                         HERE ARE SOME ADDITIONAL RESOURCES FOR THIS PATTERN                                                                                          *
+ ****************************************************************************************************************************************************************************************************************************************/
+@import 'helpers/_variables';
+@import 'helpers/_functions';
+@import 'helpers/_mixins';
+@import 'helpers/_placeholders';
+@import 'helpers/_helper';
+
+@import 'vendors/_bootstrap';
+@import 'vendors/_jquery-ui';
+
+@import 'base/_reset';
+@import 'base/_typography';
+
+@import 'layout/_navigation';
+@import 'layout/_grid';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_sidebar';
+@import 'layout/_forms';
+
+@import 'components/_buttons';
+@import 'components/_carousel';
+@import 'components/_cover';
+@import 'components/_dropdown';
+
+@import 'pages/_home';
+// @import 'pages/_contact';
+
+@import 'themes/_theme';
+@import 'themes/_admin';
