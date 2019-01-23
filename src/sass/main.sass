@@ -38,6 +38,8 @@
  *                                                      FINALLY THE VENDORS FOLDER HOLDS 3RD PARTY CODE AND THE MAIN.SCSS FILE USES @IMPORT STATEMENTS TO INCLUDE THE OTHER FILES.                                                      *
  *                                                                                         HERE ARE SOME ADDITIONAL RESOURCES FOR THIS PATTERN                                                                                          *
  ****************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
 @import 'helpers/_variables';
 @import 'helpers/_functions';
 @import 'helpers/_mixins';
@@ -67,3 +69,9 @@
 
 @import 'themes/_theme';
 @import 'themes/_admin';
+
+*
+    box-sizing: border-box
+body
+    font-family: 'Roboto', sans-serif
+    background: $lightGrey
