@@ -27,7 +27,16 @@ define('BASE', 'http://dashboard.portfolio.test');
 
 <body>
 
-
+<section id="sideMenu">
+<nav>
+    <a href="">item1</a>
+    <a href="">item2</a>
+    <a href="">item3</a>
+    <a href="">item4</a>
+    <a href="">item5</a>
+    <a href="">item6</a>
+</nav>
+</section>
 
 </body>
 

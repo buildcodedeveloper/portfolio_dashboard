@@ -107,7 +107,7 @@ module.exports = merge(common, {
         host: 'localhost',
         port: 3000,
         proxy: 'dashboard.portfolio.test/',
-        browser: "chrome",
+        browser: "default",
       }, {
         reload: false,
       },

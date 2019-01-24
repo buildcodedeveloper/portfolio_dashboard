@@ -74,4 +74,16 @@
     box-sizing: border-box
 body
     font-family: 'Roboto', sans-serif
-    background: $lightGrey
+    background: $greyLight
+
+#sideMenu
+    background: $purpleLight
+    max-width: 280px
+    & nav
+        & a
+            display: block
+            color: white
+            text-decoration: none
+            padding: 15px 30px
+            &.active
+                background: $purpleDark
