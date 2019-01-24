@@ -74,12 +74,12 @@ module.exports = merge(common, {
       },
     ],
   },
-  // resolve: {
-  //   alias: {
-  //     // 'assets': path.resolve('src/img')
-  //     'img': path.resolve('src/img/')
-  //   },
-  // },
+  resolve: {
+    alias: {
+      // 'assets': path.resolve('src/img')
+      'img': path.resolve('src/img/')
+    },
+  },
 
   plugins: [
     new Webpack.ProvidePlugin({
@@ -108,6 +108,7 @@ module.exports = merge(common, {
         port: 3000,
         proxy: 'dashboard.portfolio.test/',
         browser: "default",
+        notify: false,
       }, {
         reload: false,
       },

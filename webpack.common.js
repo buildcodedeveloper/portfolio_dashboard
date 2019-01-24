@@ -53,19 +53,52 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=10000',
+
       },
       {
-        test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            if (process.env.NODE_ENV === 'development') {
-              return 'img/[name].[ext]';
-            }
-            return '[hash].[ext]';
+        test: /\.(png|jpg|gif|svg)$/,
+        exclude: [
+          path.resolve(__dirname, './src/img'),
+        ],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name]-[hash].[ext]',
+            outputPath: '../',
+            publicPath: '/dist',
           },
-        }
+        },
       },
+      // {
+      //   test: /\.svg$/,
+      //   include: [
+      //     path.resolve(__dirname, './node_modules'),
+      //   ],
+      //   use: {
+      //     loader: 'svg-inline-loader',
+      //     options: {
+      //       name: '[name]-[hash].[ext]',
+      //     },
+      //   },
+      // },
+      // {
+      //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name(file) {
+      //       if (process.env.NODE_ENV === 'development') {
+      //         return 'img/[name].[ext]';
+      //       }
+      //       return '[hash].[ext]';
+      //     },
+      //   }
+      // },
+
+
+      // {
+      //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'url-loader?limit=10000',
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
