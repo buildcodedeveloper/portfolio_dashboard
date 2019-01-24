@@ -100,7 +100,7 @@ module.exports = merge(common, {
     }),
 
 
-    // https: //github.com/Va1/browser-sync-webpack-plugin
+    //   // https: //github.com/Va1/browser-sync-webpack-plugin
     new BrowserSyncPlugin(
       // BrowserSync options
       {

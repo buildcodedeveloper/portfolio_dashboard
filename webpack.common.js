@@ -50,6 +50,27 @@ module.exports = {
           engine: 'lodash',
         },
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000',
+      },
+      {
+        test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+        options: {
+          name(file) {
+            if (process.env.NODE_ENV === 'development') {
+              return 'img/[name].[ext]';
+            }
+            return '[hash].[ext]';
+          },
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
       // {
       //     test: /\.css$/,
       //     use: [
@@ -125,32 +146,34 @@ module.exports = {
       // },
 
       // Copy static assets over with file-loader
-      {
-        test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
-        options: {
-          name: 'icons/[name].[ext]'
-        },
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
-        },
-      },
-      {
-        test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            if (process.env.NODE_ENV === 'development') {
-              return 'img/[name].[ext]';
-            }
-            return '[hash].[ext]';
-          },
-        }
-      },
+      // {
+      //   test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'icons/[name].[ext]'
+      //   },
+      // },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'fonts/[name].[ext]'
+      //   },
+      // },
+      // {
+      //   test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/font-woff"
+      // }, {
+      //   test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/font-woff"
+      // }, {
+      //   test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/octet-stream"
+      // }, {
+      //   test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "file"
+      // },
+
       // {
       //   test: require.resolve('jquery'),
       //   use: [{
@@ -164,11 +187,6 @@ module.exports = {
       //   ]
       // },
 
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
 
     ]
   },
@@ -244,6 +262,13 @@ module.exports = {
         module: 'jquery',
         entry: 'dist/jquery.min.js',
         global: 'jQuery',
+      }, ],
+    }),
+    new HtmlWebpackExternalsPlugin({
+      externals: [{
+        module: 'font-awesome',
+        entry: 'css/font-awesome.min.css',
+        supplements: ['fonts/'],
       }, ],
     }),
 
