@@ -38,38 +38,39 @@
  *                                                      FINALLY THE VENDORS FOLDER HOLDS 3RD PARTY CODE AND THE MAIN.SCSS FILE USES @IMPORT STATEMENTS TO INCLUDE THE OTHER FILES.                                                      *
  *                                                                                         HERE ARE SOME ADDITIONAL RESOURCES FOR THIS PATTERN                                                                                          *
  ****************************************************************************************************************************************************************************************************************************************/
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
-@import 'helpers/_variables'
-@import 'helpers/_functions'
-@import 'helpers/_mixins'
-@import 'helpers/_placeholders'
-@import 'helpers/_helper'
+@import 'helpers/_variables';
+@import 'helpers/_functions';
+@import 'helpers/_mixins';
+@import 'helpers/_placeholders';
+@import 'helpers/_helper';
 
-@import 'vendors/bootstrap'
-@import 'vendors/jquery-ui'
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
 
-@import 'base/reset'
-@import 'base/typography'
+@import 'base/reset';
+@import 'base/typography';
 
-@import 'layout/navigation'
-@import 'layout/grid'
-@import 'layout/header'
-@import 'layout/footer'
-@import 'layout/sidebar'
-@import 'layout/forms'
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
 
-@import 'components/buttons'
-@import 'components/carousel'
-@import 'components/cover'
-@import 'components/dropdown'
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/cover';
+@import 'components/dropdown';
 
-@import 'pages/home'
-// @import 'pages/contact'
+@import 'pages/home';
+// @import 'pages/contact';
 
-@import 'themes/theme'
-@import 'themes/admin'
+@import 'themes/theme';
+@import 'themes/admin';
 
-body
-    font-family: 'Roboto', sans-serif
-    background: $greyLight
+body{
+    font-family: 'Roboto', sans-serif;
+    background: $greyLight;
+}
