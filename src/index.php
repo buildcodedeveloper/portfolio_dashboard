@@ -13,7 +13,7 @@ define('BASE', 'http://dashboard.portfolio.test');
 
     <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
     <!-- start:css -->
-    <link rel="stylesheet" href="styles.css" />
+   
     <!-- end:css -->
     <!-- start:bundle-time -->
     <!-- end:bundle-time -->
