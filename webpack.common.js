@@ -29,8 +29,11 @@ module.exports = {
   // devtool: 'source-map',
   module: {
 
-    rules: [
-
+    rules: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
       {
         test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
         loader: "imports?this=>window"
@@ -69,6 +72,20 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+        options: {
+          name(file) {
+            if (process.env.NODE_ENV === 'development') {
+              return "[path][name].[hash].[ext]"
+            }
+            return '[hash].[ext]';
+
+          },
+        }
+      },
+
       // {
       //   test: /\.svg$/,
       //   include: [
@@ -81,29 +98,13 @@ module.exports = {
       //     },
       //   },
       // },
-      // {
-      //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name(file) {
-      //       if (process.env.NODE_ENV === 'development') {
-      //         return 'img/[name].[ext]';
-      //       }
-      //       return '[hash].[ext]';
-      //     },
-      //   }
-      // },
 
 
       // {
       //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       //   loader: 'url-loader?limit=10000',
       // },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
+
       // {
       //     test: /\.css$/,
       //     use: [
