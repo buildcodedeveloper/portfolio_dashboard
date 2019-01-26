@@ -13,7 +13,7 @@ define('BASE', 'http://dashboard.portfolio.test');
 
     <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
     <!-- start:css -->
-   
+
     <!-- end:css -->
     <!-- start:bundle-time -->
     <!-- end:bundle-time -->
@@ -51,8 +51,8 @@ define('BASE', 'http://dashboard.portfolio.test');
             </a>
             <a href="#">
                 <div class="user-img">
-                    <i class="fa fa-carret-down" aria-hidden="true"></i>
-                </div>
+                    </div>
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
             </a>
         </div>
 

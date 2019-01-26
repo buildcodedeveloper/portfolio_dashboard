@@ -78,7 +78,7 @@ module.exports = {
         options: {
           name(file) {
             if (process.env.NODE_ENV === 'development') {
-              return "[path][name].[hash].[ext]"
+              return "[name].[hash].[ext]"
             }
             return '[hash].[ext]';
 

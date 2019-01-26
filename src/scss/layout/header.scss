@@ -49,9 +49,12 @@ header {
                 }
             }
 
-            .user-area {
-                background: url('../img/avatars.jpg') center center no-repeat;
+            .user-img {
+                background: url('../img/avatars.jpg') no-repeat center center ;
                 background-size: cover;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
             }
 
         }
