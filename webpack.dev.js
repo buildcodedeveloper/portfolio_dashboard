@@ -53,6 +53,7 @@ module.exports = merge(common, {
               options: {
                 sourceMap: true,
                 url: true,
+
               }
             },
             {

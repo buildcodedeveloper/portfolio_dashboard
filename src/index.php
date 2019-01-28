@@ -44,7 +44,7 @@ define('BASE', 'http://dashboard.portfolio.test');
             <input type="text" name="" value="">
         </div>
         <div class="user-area">
-            <a href="#">+ Add</a>
+            <a href="#" class="add">+ Add</a>
             <a href="#" class="notification">
                 <i class="fa fa-bell-o" aria-hidden="true"></i>
                 <span class="circle">3</span>

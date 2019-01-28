@@ -58,33 +58,169 @@ module.exports = {
         loader: 'url-loader?limit=10000',
 
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        exclude: [
-          path.resolve(__dirname, './src/img'),
-        ],
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name]-[hash].[ext]',
-            outputPath: '../',
-            publicPath: '/dist',
-          },
-        },
-      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   exclude: [
+      //     path.resolve(__dirname, './src/img'),
+      //   ],
+      //   use: {
+      //     loader: 'file-loader',
+      //     options: {
+      //       name: '[path][name]-[hash].[ext]',
+      //       outputPath: '../',
+      //       publicPath: '/dist',
+      //     },
+      //   },
+      // },
       {
         test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         options: {
           name(file) {
             if (process.env.NODE_ENV === 'development') {
-              return "[name].[hash].[ext]"
+              return "img/[name].[hash].[ext]"
             }
-            return '[hash].[ext]';
+            return 'img/[hash].[ext]';
 
           },
         }
       },
+
+      // {
+      //   test: /\.svg$/,
+      //   include: [
+      //     path.resolve(__dirname, './node_modules'),
+      //   ],
+      //   use: {
+      //     loader: 'svg-inline-loader',
+      //     options: {
+      //       name: '[name]-[hash].[ext]',
+      //     },
+      //   },
+      // },
+
+
+      // {
+      //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'url-loader?limit=10000',
+      // },
+
+      // {
+      //     test: /\.css$/,
+      //     use: [
+      //         process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+      //         {
+      //             loader: 'style-loader',
+      //             options: {
+      //                 sourceMap: true
+      //             }
+      //         },
+      //         {
+      //             loader: 'css-loader',
+      //             options: {
+      //                 url: true,
+      //                 sourceMap: true
+      //             }
+      //         },
+      //         {
+      //             loader: 'postcss-loader',
+      //             options: {
+      //                 sourceMap: true
+      //             }
+      //         },
+      //     ]
+      // },
+      // {
+      //     test: /\.s?[ac]ss$/,
+      //     use: [
+      //         process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+      //         {
+      //             loader: 'style-loader',
+      //             options: {
+      //                 sourceMap: true
+      //             }
+      //         },
+      //         {
+      //             loader: 'css-loader',
+      //             options: {
+      //                 url: true,
+      //                 sourceMap: true
+      //             }
+      //         },
+      //         {
+      //             loader: 'postcss-loader',
+      //             options: {
+      //                 sourceMap: true
+      //             }
+      //         },
+      //         {
+      //             loader: 'sass-loader',
+      //             options: {
+      //                 url: true,
+      //                 sourceMap: true
+      //             }
+      //         }
+      //     ],
+      // },
+
+      // {
+      //     test: /\.sass$/,
+      //     use: ExtractTextPlugin.extract({
+      //         fallback: 'style-loader',
+      //         use: ['css-loader', 'postcss-loader', 'sass-loader']
+      //     })
+
+      // },
+      // {
+      //     test: /\.(jpe?g|png|gif|svg|mp4)$/i,
+      //     use: [{
+      //         loader: 'file-loader',
+      //         options: {},
+      //     }, ]
+      // },
+
+      // Copy static assets over with file-loader
+      // {
+      //   test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'icons/[name].[ext]'
+      //   },
+      // },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'fonts/[name].[ext]'
+      //   },
+      // },
+      // {
+      //   test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/font-woff"
+      // }, {
+      //   test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/font-woff"
+      // }, {
+      //   test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "url?limit=10000&mimetype=application/octet-stream"
+      // }, {
+      //   test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "file"
+      // },
+
+      // {
+      //   test: require.resolve('jquery'),
+      //   use: [{
+      //       loader: 'expose-loader',
+      //       query: 'jQuery',
+      //     },
+      //     {
+      //       loader: 'expose-loader',
+      //       query: '$',
+      //     },
+      //   ]
+      // },
+
 
     ]
   },
