@@ -11,7 +11,7 @@ define('BASE', 'http://dashboard.portfolio.test');
 
     <title>Dashboard Portfolio</title>
 
-    <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
+    <link rel="shortcut icon" href="<?=BASE;?>/img/html5-logo.ico" />
     <!-- start:css -->
 
     <!-- end:css -->
@@ -51,10 +51,13 @@ define('BASE', 'http://dashboard.portfolio.test');
             </a>
             <a href="#">
                 <div class="user-img">
-                    </div>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
             </a>
         </div>
+    </header>
+
+    <div class="content-area"></div>
 
 </body>
 
