@@ -6,12 +6,9 @@
   "author": "Build Developer",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "start:dev": "webpack-dev-server --config webpack.dev.js",
-    "wp:dev": "webpack --config webpack.dev.js",
-    "heroku-postbuild": "webpack -p --config webpack.prod.js",
-    "postinstall": "webpack -p --config webpack.prod.js",
-    "start": "node server.js"
+    "build:prod": "NODE_ENV=production webpack --config webpack.prod.js",
+    "build": "webpack-dev-server --config webpack.dev.js"
+
   },
   "dependencies": {
     "airbnb-browser-shims": "^3.0.0",

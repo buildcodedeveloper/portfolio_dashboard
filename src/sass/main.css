@@ -1,0 +1,72 @@
+/*
+Error: Invalid CSS after "#302043": expected expression (e.g. 1px, bold), was ";"
+        on line 1 of helpers/_variables.sass
+        from line 43 of main.sass
+
+1: $purpleLight: #302043;
+2: $purpleDark: #282639;
+3: $greenNeon: #91CF48;
+4: $greyLight: #FAF6F9;
+5: $greyDark: #EAEDF3;
+
+Backtrace:
+helpers/_variables.sass:1
+main.sass:43
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/scss/parser.rb:1308:in `expected'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/script/lexer.rb:240:in `expected!'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/script/parser.rb:897:in `assert_done'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/script/parser.rb:69:in `parse'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/script/parser.rb:228:in `parse'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/script.rb:27:in `parse'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:1169:in `parse_script'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:779:in `parse_variable'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:650:in `parse_line'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:539:in `build_tree'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:558:in `block in append_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:557:in `each'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:557:in `append_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:417:in `_to_tree'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:321:in `to_tree'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:88:in `block in with_import'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:135:in `with_frame'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:88:in `with_import'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:135:in `with_frame'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `with_base'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:209:in `each'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/plugin.rb:82:in `update_stylesheets'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/exec/sass_scss.rb:51:in `process_result'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/exec/base.rb:50:in `parse'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/lib/sass/exec/base.rb:18:in `parse!'
+D:/App/Installed/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.2/bin/sass:13:in `<top (required)>'
+D:/App/Installed/Ruby25-x64/bin/sass:23:in `load'
+D:/App/Installed/Ruby25-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"#302043\": expected expression (e.g. 1px, bold), was \";\"\A         on line 1 of helpers/_variables.sass\A         from line 43 of main.sass\A \A 1: $purpleLight: #302043;\A 2: $purpleDark: #282639;\A 3: $greenNeon: #91CF48;\A 4: $greyLight: #FAF6F9;\A 5: $greyDark: #EAEDF3;"; }

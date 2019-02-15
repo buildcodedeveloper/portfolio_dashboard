@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/**************************************************************************************************************************************************************************************************
+ * THE 7–1 PATTERN ANOTHER STRUCTURE I CAME ACROSS IS THE 7–1 PATTERN FROM HUGO GIRAUDEL. HERE’S HOW YOU MIGHT SET UP A DIRECTORY ALONG WITH SOME EXAMPLES OF FILES THAT WOULD BE IN EACH FOLDER. *
+ *                                                                                             BASE/                                                                                              *
+ *                                                                                          _RESET.SCSS                                                                                           *
+ *                                                                                        _TYPOGRAPHY.SCSS                                                                                        *
+ *                                                                                          _COLOR.SCSS                                                                                           *
+ *                                                                                          COMPONENTS/                                                                                           *
+ *                                                                                         _BUTTONS.SCSS                                                                                          *
+ *                                                                                        _NAVIGATION.SCSS                                                                                        *
+ *                                                                                         _GALLERY.SCSS                                                                                          *
+ *                                                                                            LAYOUT/                                                                                             *
+ *                                                                                          _HEADER.SCSS                                                                                          *
+ *                                                                                           _GRID.SCSS                                                                                           *
+ *                                                                                         _SIDEBAR.SCSS                                                                                          *
+ *                                                                                             PAGES/                                                                                             *
+ *                                                                                           _HOME.SCSS                                                                                           *
+ *                                                                                          _ABOUT.SCSS                                                                                           *
+ *                                                                                         _CONTACT.SCSS                                                                                          *
+ *                                                                                            THEMES/                                                                                             *
+ *                                                                                          _THEME.SCSS                                                                                           *
+ *                                                                                          _ADMIN.SCSS                                                                                           *
+ *                                                                                      HELPERS/ (OR UTILS/)                                                                                      *
+ *                                                                                        _VARIABLES.SCSS                                                                                         *
+ *                                                                                        _FUNCTIONS.SCSS                                                                                         *
+ *                                                                                          _MIXINS.SCSS                                                                                          *
+ *                                                                                            VENDORS/                                                                                            *
+ *                                                                                        _BOOTSTRAP.SCSS                                                                                         *
+ *                                                                                        _JQUERY-UI.SCSS                                                                                         *
+ *                                                                                           MAIN.SCSS                                                                                            *
+ **************************************************************************************************************************************************************************************************/
+/****************************************************************************************************************************************************************************************************************************************
+ *                                                                THE BASE FOLDER HOLDS BOILERPLATE CONTENT. IT HOLDS THE STYLES EVERY PAGE OF YOUR SITE SHOULD RECEIVE                                                                 *
+ *                                                     THE COMPONENTS FOLDER HOLDS ALL YOUR MICRO LAYOUT FILES. YOUR STYLES FOR BUTTONS AND NAVIGATION AND SIMILAR PAGE COMPONENTS.                                                     *
+ *                                  YOUR MACRO LAYOUT FILES GO IN THE LAYOUTS FOLDER. STYLES FOR MAJOR SECTIONS OF THE LAYOUT LIKE A HEADER OR FOOTER AND STYLES FOR A GRID SYSTEM WOULD BELONG HERE.                                   *
+ *   IF YOU HAVE STYLES SPECIFIC TO INDIVIDUAL PAGES ON YOUR SITE, YOU CAN PLACE THEM IN THE PAGES FOLDER. FOR EXAMPLE IT’S NOT UNCOMMON FOR THE HOME PAGE OF YOUR SITE TO REQUIRE PAGE SPECIFIC STYLES THAT NO OTHER PAGE RECEIVES.    *
+ * THE THEMES FOLDER HOLDS FILES THAT CREATE PROJECT SPECIFIC THEMES. FOR EXAMPLE ONE SECTION OF YOUR SITE MIGHT USE A COLOR SCHEME WITH PRIMARY COLORS, WHILE ANOTHER SECTION BUILDS A COLOR SCHEME BASED ON NEUTRALS AND EARTH TONES. *
+ *                                                       THE HELPERS OR UTILS FOLDER HOLDS SASS TOOLS, HELPER FILES, VARIABLES, AND CONFIG FILES. THESE FILES WON’T BE COMPILED.                                                        *
+ *                                                      FINALLY THE VENDORS FOLDER HOLDS 3RD PARTY CODE AND THE MAIN.SCSS FILE USES @IMPORT STATEMENTS TO INCLUDE THE OTHER FILES.                                                      *
+ *                                                                                         HERE ARE SOME ADDITIONAL RESOURCES FOR THIS PATTERN                                                                                          *
+ ****************************************************************************************************************************************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul, li {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+#sideMenu {
+  background: #302043;
+  max-width: 280px;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+  #sideMenu nav {
+    padding-top: 100px; }
+  #sideMenu a {
+    display: block;
+    color: #EAEDF3;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 300; }
+    #sideMenu a:hover {
+      transition: all 0.3s ease-in-out;
+      background: #282639;
+      padding: 15px 30px 15px 25px;
+      border-left: 5px solid #91CF48;
+      padding: 15px 30px 15px 25px; }
+      #sideMenu a:hover .fa {
+        color: #91CF48; }
+      #sideMenu a:hover .fa {
+        color: #91CF48; }
+    #sideMenu a .fa {
+      color: #EAEDF3;
+      margin-right: 0.8rem;
+      font-size: 1.4rem;
+      display: inline-block;
+      width: 30psearch-areax;
+      position: relative;
+      top: 2px; }
+    #sideMenu a.active {
+      background: #282639;
+      border-left: 5px solid #91CF48;
+      padding: 15px 30px 15px 25px; }
+      #sideMenu a.active .fa {
+        color: #91CF48; }
+
+header {
+  margin-left: 280px;
+  padding: 10px;
+  background: #fff; }
+  header .search-area {
+    display: inline-block;
+    width: 50%; }
+    header .search-area .fa {
+      color: #EAEDF3; }
+    header .search-area input[type="text"] {
+      background: transparent;
+      border: none;
+      font-size: 1.3rem;
+      color: #91CF48;
+      padding: 10px;
+      font-weight: 100;
+      width: 80%;
+      transition: all 0.5s ease-in-out; }
+      header .search-area input[type="text"]:hover {
+        background: #FAF6F9; }
+  header .user-area {
+    display: inline-block;
+    float: right;
+    padding: 10px; }
+    header .user-area a {
+      color: #1b1b1b;
+      display: inline-block;
+      padding-right: 20px;
+      vertical-align: top;
+      height: 30px; }
+      header .user-area a.add {
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 10px; }
+      header .user-area a.notification {
+        position: relative;
+        font-size: 20px;
+        padding-top: 7px; }
+        header .user-area a.notification .circle {
+          background: red;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          display: inline-block;
+          font-size: 11px;
+          color: white;
+          text-align: center;
+          position: absolute;
+          top: 5px;
+          left: 7px; }
+      header .user-area a .user-img {
+        background: url("../img/avatars.jpg") no-repeat center center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px; }
+      header .user-area a .fa-caret-down {
+        position: relative;
+        top: -8; }
+
+textarea:focus, input:focus, input:active {
+  background: #FAF6F9;
+  outline: none; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #FAF6F9; }
+
+/*# sourceMappingURL=main.css.map */
